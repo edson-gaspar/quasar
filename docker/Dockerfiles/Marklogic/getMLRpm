@@ -38,17 +38,9 @@ then
       echo "Didn't find MarkLogic.rpm in cache, downloading ..."
       downloadMLRpm
       cp $ML_RPM_PATH $HOME/.marklogic/MarkLogic.rpm
-      ls -al $HOME/.marklogic/
-      ls -al ${ML_RPM_PATH}
-      ls -al ${ML_DIR}
-      cat ${ML_RPM_SHA1}
     else
       echo "Found MarkLogic.rpm in cache ..."
       cp $HOME/.marklogic/MarkLogic.rpm $ML_RPM_PATH
-      ls -al $HOME/.marklogic/
-      ls -al ${ML_RPM_PATH}
-      ls -al ${ML_DIR}
-      cat ${ML_RPM_SHA1}
     fi
   fi
     shasum --status -c $ML_RPM_SHA1
